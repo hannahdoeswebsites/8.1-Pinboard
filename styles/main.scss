@@ -2,47 +2,61 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
-$light-gray: #e0e0e0;
-$medium-gray: #cbcbcb;
-
-* {
-  margin: 0;
-  padding: 0;
+body {
+  background-image: url("../../12819-NOLG50.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.app-container {
+section {
   @include outer-container;
-  margin-top: 1em;
 }
 
-.menu {
-  @include span-columns(8);
-  list-style: none;
+ul {
+  list-style-type: none;
+  margin-top: 150px;
+  @include span-columns(6);
+  @include shift(1);
+
 }
 
-.menu-category-heading {
-  background-color: $light-gray;
-  border: 1px solid $medium-gray;
-  text-align: center;
+li {
+  padding-bottom: 20px;
 }
 
-.menu-category-items {
-  list-style: none;
-  border-right: 1px solid $light-gray;
-  border-left: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
-  margin-bottom: 2em;
+#title {
+  font-size: 35px;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+  line-height: 15px;
+
 }
 
-.order {
-  @include span-columns(4);
+#url {
+  color: white;
 }
 
-.order-items {
-  @extend .pure-table;
+.bookmark-title {
+  @include span-columns(9);
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.order-submit {
-  @extend .pure-button;
-  @extend .pure-button-primary;
+.bookmark-url{
+  @include span-columns(9);
+  margin-bottom: 10px;
+}
+
+input {
+  @include span-columns(3);
+}
+
+.bookmark-edit-form {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.bookmark-edit-form.active {
+  max-height: 1000px;
 }
